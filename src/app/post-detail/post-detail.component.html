@@ -1,0 +1,31 @@
+<div class="post-wrapper box-shadow-with-radius">
+    <article class="title-and-body-of-post" *ngIf="postData.length">
+        <span class="line-point"></span>
+        <!-- title -->
+        <h2>
+            {{ postData[0].title }}
+        </h2>
+
+        <!-- body -->
+        <p>
+            {{ postData[0].body }}
+        </p>
+    </article>
+    <section class="comment-section">
+        <h3>Comments</h3>
+
+        <!-- user comments.. -->
+        <div class="comment-tile" *ngFor="let comment of commentsData; let last = last" [ngClass]="{'no-border': last}">
+            <!-- comment -->
+            <div class="comment-body">{{ comment.body }}</div>
+            <!-- name -->
+            <div class="comment-username">{{ comment.name }}</div>
+        </div>
+
+        <!-- text area -->
+        <textarea placeholder="comments." [(ngModel)]="comments"></textarea>
+
+        <!-- add comment button -->
+        <button (click)="openDialog()" mat-raised-button color="primary">add comments</button>
+    </section>
+</div>

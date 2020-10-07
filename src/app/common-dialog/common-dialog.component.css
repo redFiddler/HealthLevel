@@ -1,0 +1,11 @@
+.page-title-wrapper h1 {
+    font-size: 18px;
+}
+
+.mat-dialog-actions {
+    direction: rtl;
+}
+
+.mat-button-base {
+    margin-left: 8px;
+}

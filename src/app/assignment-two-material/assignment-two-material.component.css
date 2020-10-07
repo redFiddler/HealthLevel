@@ -1,0 +1,35 @@
+.table-content {
+    margin-bottom: 50px
+}
+
+.mat-header-cell {
+    color: #000000;
+    font-weight: 600
+}
+
+.mat-column-body {
+    padding: 0 20px;
+}
+
+.mat-column-title {
+    border-right: 1px solid rgba(0, 0, 0, .12);
+    padding-right: 15px;
+}
+
+.mat-column-user_name {
+    border-left: 1px solid rgba(0, 0, 0, .12);
+    padding-left: 15px;
+}
+
+.mat-cell {
+    line-height: 19px;
+}
+
+.view-more {
+    font-size: 14px;
+    color: #26226c;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 10px;
+    border-bottom: 1px solid #26226c
+}

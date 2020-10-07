@@ -1,0 +1,35 @@
+<div class="model-wrapper">
+    <div class="page-title-wrapper">
+        <h1>
+            Enter your details
+        </h1>
+    </div>
+
+    <!-- name -->
+    <mat-form-field appearance="outline" class="full-widthinput">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="enter name" [(ngModel)]="data.name" name="name" />
+    </mat-form-field>
+
+    <!-- name -->
+    <!-- email validation is not done because of time constraint -->
+    <mat-form-field appearance="outline" class="full-widthinput">
+        <mat-label>Email Address</mat-label>
+        <input matInput placeholder="enter email address" [(ngModel)]="data.email" name="email" />
+    </mat-form-field>
+
+    <!-- gender -->
+    <mat-form-field appearance="outline" class="full-widthinput">
+        <mat-label>Select Gender</mat-label>
+        <mat-select name="gender" [(ngModel)]="gender">
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- buttons -->
+    <div mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close>No Thanks</button>
+        <button mat-raised-button color="primary" (click)="checkUser()" [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+    </div>
+</div>

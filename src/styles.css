@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('assets/fonts/GothamBook.eot');
+    src: local('GothamBook'), url('assets/fonts/GothamBook.woff') format('woff'), url('assets/fonts/GothamBook.ttf') format('truetype');
+}
+
+body,
+html {
+    font-family: 'GothamBook';
+    font-size: 14px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    /* background: linear-gradient(180deg, #eaf1f8 22%, #fafcff 86%); */
+    background: rgb(245 245 245);
+    padding: 75px 0 0 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* elements that require common font family */
+
+.mat-table,
+.mat-paginator,
+.mat-paginator-page-size .mat-select-trigger,
+input,
+textarea,
+.full-widthinput,
+button {
+    font-family: 'GothamBook';
+    font-weight: 500;
+}
+
+
+/* common page title */
+
+.page-title-wrapper h1 {
+    border-bottom: 2px solid #26226c;
+    padding: 0 0 8px 0;
+    margin-bottom: 30px;
+    display: inline-block;
+    color: #26226c
+}
+
+.box-shadow-with-radius {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+    border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomright: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+
+.full-widthinput {
+    width: 100%;
+}

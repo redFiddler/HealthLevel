@@ -1,0 +1,41 @@
+<div class="page-title-wrapper">
+    <h1 class="page-title">
+        Assignment two (API work)
+    </h1>
+</div>
+
+
+<!-- grid -->
+<div class="table-content box-shadow-with-radius">
+    <table mat-table [dataSource]="postData">
+        <!-- title -->
+        <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef> Post Title </th>
+            <td mat-cell *matCellDef="let element"> {{ element.title | titlecase }} </td>
+        </ng-container>
+
+        <!-- body -->
+        <ng-container matColumnDef="body">
+            <th mat-header-cell *matHeaderCellDef> Post Body </th>
+            <td mat-cell *matCellDef="let element">
+                {{ (element.body | slice:0:120) + '... ' }}
+                <!-- /post-details/post_id/user_id.. -->
+                <a class="view-more" [routerLink]="['/post-details', element.id, element.user_id]">view more</a>
+            </td>
+        </ng-container>
+
+        <!-- user name -->
+        <ng-container matColumnDef="user_name">
+            <th mat-header-cell *matHeaderCellDef> Author name </th>
+            <td mat-cell *matCellDef="let element"> {{ element.user_name | titlecase }} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
+
+    <p class="no-found" *ngIf="!postDataLength" style="border:1px solid orange">Not Found..</p>
+</div>

@@ -1,0 +1,32 @@
+<div class="center-align-section">
+    <div class="page-title-wrapper">
+        <h1>
+            Assignment one (JSON Formatter)
+        </h1>
+    </div>
+
+    <!-- input -->
+    <div class="text-area-holder box-shadow-with-radius">
+        <div class="header-title">Input</div>
+        <textarea [(ngModel)]="jsonValue" (ngModelChange)="onInputChange($event)" placeholder="past your JSON"></textarea>
+    </div>
+
+    <!-- divider -->
+    <div class="divider box-shadow-with-radius"></div>
+
+    <!-- output -->
+    <div class="text-area-holder box-shadow-with-radius copy-icon-wrapper">
+        <div class="header-title">Output</div>
+        <textarea value="{{ jsonFormatedValue == '' ? (jsonFormatedValue) : (jsonFormatedValue| json) }}" readonly placeholder="your jSON output" #formatedJson></textarea>
+        <span class="copy-icon" *ngIf="jsonFormatedValue == '' ? false : true">
+            <mat-icon aria-hidden="false" (click)="copyToClipBoard(formatedJson)">content_copy</mat-icon>
+        </span>
+    </div>
+</div>
+
+
+
+
+<!-- <pre>
+    {{ jsonFormatter }}  
+</pre> -->
